@@ -1,0 +1,6 @@
+ul { padding: 0px; margin: 0px; }
+#response { padding: 10px; background-color: #9F9; border: 2px solid #396; margin-bottom: 20px; }
+#list li { margin: 0 0 3px; padding: 14px 8px; background-color: #fff; border: #ccc solid 1px; color: #333; list-style: none; }
+.pointer { cursor: move; }
+.marginTop_6 { margin-top: -6px; }
+.marginLeft { margin-left: 10px; }
