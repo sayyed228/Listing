@@ -42,5 +42,5 @@ if ($uploadOk == 0) {
     }
 }
 
-header('Location: index_1.php');
+header('Location: my-listing.php');
 ?>

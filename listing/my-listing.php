@@ -10,13 +10,13 @@
    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="table">
   <tbody>
     <tr>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-      <td><?php echo $userRow['username']; ?> </td>
+      <td>Id</td>
+      <td>Categories</td>
+      <td>Tags</td>
+      <td>Name</td>
+      <td>Address</td>
+      <td>Number</td>
+      <td>Rating</td>
     </tr>
      <?php
                 include("dbconnect.php");
@@ -47,19 +47,22 @@
 				$Number = stripslashes($row['Number']);
 				$Rating = stripslashes($row['Rating']);
 				$UserName = stripslashes($row['UserName']);
+				$photo = stripslashes($row['photo']);
 				
 				
 				
 				?>
     <tr>
-      <td><?php echo $id ?></td>
+      <td class="id"><?php echo $id ?></td>
+      <td><img src="uploads/<?php echo $photo ?>" style="width:100px; height:100px;"/></td>
       <td><?php echo $Categories ?></td>
       <td><?php echo $tags ?></td>
-      <td><a href="single-blog.php?name=<?php echo $Name ?>"><?php echo $Name ?></a></td>
+      <td><?php echo $Name ?></td>
       <td><?php echo $Address ?></td>
       <td><?php echo $Number ?></td>
-      <td><?php echo $Rating ?></td>
-      <td><?php echo $UserName ?></td>
+      <td></td>
+      <td class="Edit"><a href="#" class="btn btn-primary">Edit</button></td>
+      <td><a href="delete-my-listing.php?id=<?php echo $id ?>" class="btn btn-danger">Delete</button></td>
     </tr>
     <?php } ?>
   </tbody>
@@ -67,11 +70,29 @@
  </div>
  
 
-                
-               
-
-                
-                 
+       <script>
+	   $(document).ready(function(e) {
+        
+		$('.Edit').click(function() {
+		 var id = $(this).prevAll('td:nth-child(1)').text();
+		 var photo = $(this).prevAll('td:nth-child(2)').text();
+		 var Categories = $(this).prevAll('td:nth-child(3)').text();
+		 var tags = $(this).prevAll('td:nth-child(4)').text();
+		 var Name = $(this).prevAll('td:nth-child(5)').text();
+		 var Address = $(this).prevAll('td:nth-child(6)').text();
+		 var PhoneNumber = $(this).prevAll('td:nth-child(7)').text();
+		 
+			
+			//alert(PhoneNumber);
+			});
+		
+		
+		
+		
+		//alert('asdf')
+    });
+	   </script>         
+          
  
 </body>
 </html>

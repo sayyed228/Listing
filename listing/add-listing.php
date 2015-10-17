@@ -46,6 +46,14 @@
           <td><input type="text" id="Website" value="w3schools.com" class="form-control"/></td>
         </tr>
         <tr>
+          <td>Status</td>
+          <td><input type="text" id="Status" value="true" class="form-control"/></td>
+        </tr>
+        <tr>
+          <td>UserID</td>
+          <td><input type="text" id="UserID" value="<?php echo $_SESSION['user'];?>" class="form-control"/></td>
+        </tr>
+        <tr>
           <td>Select image to upload:</td>
           <td><form action="upload.php" method="post" enctype="multipart/form-data">
               <input type="file" name="fileToUpload" id="fileToUpload">
@@ -84,7 +92,7 @@ $(document).ready(function(e) {
 	   Add_Listing() 
 	   
 	    
-	   var filename = $('input[type=file]').val().split('\\').pop();
+	   //var filename = $('input[type=file]').val().split('\\').pop();
 	   
 	  
 		
@@ -124,15 +132,18 @@ $(document).ready(function(e) {
 		var Email = document.getElementById('Email').value
 		var Rating = document.getElementById('Rating').value
 		var Website = document.getElementById('Website').value
+		var photo = $('input[type=file]').val().split('\\').pop();
+		var Status = $('#Status').val();
+		var UserID = $('#UserID').val()
 
         
 		
 		//var listorder = document.getElementById('listorder').value= highest_listorder_plus
-		alert(Rating)
 	
-        aa.open("GET", "add-listing-back.php?Name=" + Name + "&Address=" + Address + "&Categories=" + Categories + "&Tags=" + Tags + "&Phone=" + Phone + "&Email=" + Email + "&Rating=" + Rating + "&Website=" + Website, true)
+	
+        aa.open("GET", "add-listing-back.php?Name=" + Name + "&Address=" + Address + "&Categories=" + Categories + "&Tags=" + Tags + "&Phone=" + Phone + "&Email=" + Email + "&Rating=" + Rating + "&Website=" + Website + "&photo=" + photo + "&Status=" + Status + "&UserID=" + UserID, true)
         aa.send()
-		 
+		alert(Status)	 
 	
     }
 	 
