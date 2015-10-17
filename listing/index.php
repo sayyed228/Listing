@@ -1,4 +1,4 @@
-<?php include_once 'session.php'; ?>
+<?php /*include_once 'session.php';*/ ?>
 <html>
 <?php include_once 'header.php'; ?>
 <body>

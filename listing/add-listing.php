@@ -43,7 +43,7 @@
         </tr>
         <tr>
           <td>website</td>
-          <td><input type="text" id="Website" value="webcreativities.net" class="form-control"/></td>
+          <td><input type="text" id="Website" value="w3schools.com" class="form-control"/></td>
         </tr>
         <tr>
           <td>Select image to upload:</td>

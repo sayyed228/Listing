@@ -20,19 +20,20 @@
     </tr>
      <?php
                 include("dbconnect.php");
+				 echo $userRow['username']; 
+				echo $_SESSION['user'];
 		//echo		$name = $_GET["name"];
 			
-  $tags = $_GET["tags"]; 
-   $username = $_GET["username"]; 
- echo $tags ;
-  echo  $username;
+  //$tags = $_GET["tags"]; 
+   //$username = $_GET["username"]; 
+ //echo $tags ;
+  //echo  $username;
 				
 				
 		//$query  = "select * from listing where Name like '%".$name."%' or Categories like 'asdfasdf' or Tags like '%".$tags."%' order by Rating DESC";
 		//$query  = "select * from listing where Name like '%".$name."%' or Categories like 'asdfasdf' or Tags like '%".$tags."%' order by Rating DESC";
-		$query  = "select * from listing where UserName = '".$username."' AND (Name like '%".$tags."%' or Categories like '%null%' or Tags like '%".$tags."%')
-		 order by Rating ASC";
-//$query  = "select * from listing WHERE  id =  '".$id."' or Name like '%null%' or Categories like '%null%' or Tags like '%null%' order by Rating DESC";
+		$query  = "select * from listing where UserID = '".$_SESSION['user']."'";  //user_id="
+		//$query  = "select * from listing WHERE  id =  '".$id."' or Name like '%null%' or Categories like '%null%' or Tags like '%null%' order by Rating DESC";
 		
 				$result = mysql_query($query);
 				while($row = mysql_fetch_array($result, MYSQL_ASSOC))
@@ -45,6 +46,8 @@
 				$Address = stripslashes($row['Address']);
 				$Number = stripslashes($row['Number']);
 				$Rating = stripslashes($row['Rating']);
+				$UserName = stripslashes($row['UserName']);
+				
 				
 				
 				?>
@@ -56,6 +59,7 @@
       <td><?php echo $Address ?></td>
       <td><?php echo $Number ?></td>
       <td><?php echo $Rating ?></td>
+      <td><?php echo $UserName ?></td>
     </tr>
     <?php } ?>
   </tbody>

@@ -13,13 +13,11 @@
       <a class="navbar-brand" href="#">SK</a> </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
-        <li><a href="#">Home</a></li>
+        <li><a href="index.php">Home</a></li>
         <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Pages<span class="caret"></span></a>
           <ul class="dropdown-menu">
             <li><a href="add-listing.php">Add Listing</a></li>
-            <li><a href="index_2.php">Partners</a></li>
-            <li><a href="results.php">Welcome</a></li>
-            <li><a href="#">Real Estate Companies</a></li>
+           
           </ul>
         </li>
       </ul>
