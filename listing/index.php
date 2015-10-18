@@ -2,6 +2,7 @@
 <html>
 <?php include_once 'header.php'; ?>
 <body>
+
 <?php  require_once('navbar.php');?>
 <form action="results.php" method="get">
 <!-- Name : <input type="text" name="username" value="<?php /*echo $userRow['username'];*/ ?> ">-->

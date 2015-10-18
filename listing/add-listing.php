@@ -8,6 +8,7 @@
 }
 </style>
 <body>
+<?php  require_once('header-top.php');?>
 <?php  require_once('navbar.php');?>
 <div class="container">
   <div class="col-sm-6">
@@ -71,60 +72,38 @@
 <script src="jquery.min.js" type="text/javascript"></script> 
 
 
-<script>
 
-$(document).ready(function() {
-  
-	 
-	   
- });	   
-	   
-
-</script>
 
 
 <script>
 
-$(document).ready(function(e) {
-  
-   $('button').click(function() {
-	   
-	   Add_Listing() 
-	   
-	    
-	   //var filename = $('input[type=file]').val().split('\\').pop();
-	   
-	  
-		
-  	   $("#listingimage").trigger("click");
+$(document).ready(function (e) {
 
-	 
-	 //alert(filename)
-	
-	   });
-	   
-	   
-	   
-	   
-	   
-	   
-	   
-  /**  Add query excute here! **/
+	$('button').click(function () {
+		Add_Listing()
+		//var filename = $('input[type=file]').val().split('\\').pop();
+		$("#listingimage").trigger("click");
+	});
 
-    function Add_Listing() {
 
-      
-        if (window.XMLHttpRequest) {
-            aa = new XMLHttpRequest();
-        }
 
-        aa.onreadystatechange = function () {
-            if (aa.readyState == 4 && aa.status == 200) {
-                document.getElementById('txthint').innerHTML = aa.responseText
-            }
-        }
 
-        var Name = document.getElementById('Name').value
+
+
+
+	/**  Add query excute here! **/
+
+	function Add_Listing() {
+		if (window.XMLHttpRequest) {
+			aa = new XMLHttpRequest();
+		}
+		aa.onreadystatechange = function () {
+			if (aa.readyState == 4 && aa.status == 200) {
+				document.getElementById('txthint').innerHTML = aa.responseText
+			}
+		}
+
+		var Name = document.getElementById('Name').value
 		var Address = $('#Address').text()
 		var Categories = document.getElementById('Categories').value
 		var Tags = document.getElementById('Tags').value
@@ -136,19 +115,22 @@ $(document).ready(function(e) {
 		var Status = $('#Status').val();
 		var UserID = $('#UserID').val()
 
-        
-		
-		//var listorder = document.getElementById('listorder').value= highest_listorder_plus
-	
-	
-        aa.open("GET", "add-listing-back.php?Name=" + Name + "&Address=" + Address + "&Categories=" + Categories + "&Tags=" + Tags + "&Phone=" + Phone + "&Email=" + Email + "&Rating=" + Rating + "&Website=" + Website + "&photo=" + photo + "&Status=" + Status + "&UserID=" + UserID, true)
-        aa.send()
-		alert(Status)	 
-	
-    }
-	 
-	   
-    
+		//alert(photo)
+
+		if (photo === '') {
+			var photoProfile = 'default-business-place-holder.png'
+
+		} else {
+			var photoProfile = $('input[type=file]').val().split('\\').pop();
+			//alert(photo)
+		}
+
+
+		aa.open("GET", "add-listing-back.php?Name=" + Name + "&Address=" + Address + "&Categories=" + Categories + "&Tags=" + Tags + "&Phone=" + Phone + "&Email=" + Email + "&Rating=" + Rating + "&Website=" + Website + "&photoProfile=" + photoProfile + "&Status=" + Status + "&UserID=" + UserID, true)
+		aa.send()
+			//alert(Status)	 
+	}
+
 });
 
 </script>

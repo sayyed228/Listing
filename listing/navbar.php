@@ -1,11 +1,4 @@
-<div class="container">
- <div class="row">
-  <div class="col-sm-12 text-right">
-    hi' <?php echo $userRow['username']; ?>
-       
-  </div>
- </div>
-</div>
+
 <nav class="navbar navbar-default">
   <div class="container">
     <div class="navbar-header">
