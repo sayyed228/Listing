@@ -1,0 +1,9 @@
+[19-Oct-2015 05:15:32 Etc/GMT] PHP Notice:  Undefined index: user in /home/webcreat/public_html/demo11/session.php on line 9
+[19-Oct-2015 05:15:32 Etc/GMT] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/webcreat/public_html/demo11/session.php on line 10
+[19-Oct-2015 05:15:32 Etc/GMT] PHP Notice:  Undefined index: user in /home/webcreat/public_html/demo11/add-listing.php on line 56
+[19-Oct-2015 05:15:54 Etc/GMT] PHP Warning:  getimagesize() [<a href='function.getimagesize'>function.getimagesize</a>]: Filename cannot be empty in /home/webcreat/public_html/demo11/upload.php on line 8
+[19-Oct-2015 05:16:13 Etc/GMT] PHP Warning:  getimagesize() [<a href='function.getimagesize'>function.getimagesize</a>]: Filename cannot be empty in /home/webcreat/public_html/demo11/upload.php on line 8
+[19-Oct-2015 05:16:33 Etc/GMT] PHP Warning:  getimagesize() [<a href='function.getimagesize'>function.getimagesize</a>]: Filename cannot be empty in /home/webcreat/public_html/demo11/upload.php on line 8
+[19-Oct-2015 05:23:05 Etc/GMT] PHP Parse error:  syntax error, unexpected T_STRING in /home/webcreat/public_html/demo11/delete-my-listing.php on line 19
+[19-Oct-2015 05:23:21 Etc/GMT] PHP Parse error:  syntax error, unexpected T_STRING in /home/webcreat/public_html/demo11/delete-my-listing.php on line 19
+[19-Oct-2015 05:23:29 Etc/GMT] PHP Parse error:  syntax error, unexpected T_STRING in /home/webcreat/public_html/demo11/delete-my-listing.php on line 19

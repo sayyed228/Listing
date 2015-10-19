@@ -52,7 +52,10 @@
         </tr>
         <tr>
           <td>UserID</td>
-          <td><input type="text" id="UserID" value="<?php echo $_SESSION['user'];?>" class="form-control"/></td>
+          <td>
+           <input type="text" id="UserID" value="<?php echo $_SESSION['user'];?>" class="form-control"/>
+           <input type="text" id="DateCurrent" value="<?php echo date('d/m/Y')?>" class="form-control"/>
+          </td>
         </tr>
         <tr>
           <td>Select image to upload:</td>
@@ -114,6 +117,7 @@ $(document).ready(function (e) {
 		var photo = $('input[type=file]').val().split('\\').pop();
 		var Status = $('#Status').val();
 		var UserID = $('#UserID').val()
+		var DateCurrent = $('#DateCurrent').val()
 
 		//alert(photo)
 
@@ -126,7 +130,7 @@ $(document).ready(function (e) {
 		}
 
 
-		aa.open("GET", "add-listing-back.php?Name=" + Name + "&Address=" + Address + "&Categories=" + Categories + "&Tags=" + Tags + "&Phone=" + Phone + "&Email=" + Email + "&Rating=" + Rating + "&Website=" + Website + "&photoProfile=" + photoProfile + "&Status=" + Status + "&UserID=" + UserID, true)
+		aa.open("GET", "add-listing-back.php?Name=" + Name + "&Address=" + Address + "&Categories=" + Categories + "&Tags=" + Tags + "&Phone=" + Phone + "&Email=" + Email + "&Rating=" + Rating + "&Website=" + Website + "&photoProfile=" + photoProfile + "&Status=" + Status + "&UserID=" + UserID + "&DateCurrent=" + DateCurrent, true)
 		aa.send()
 			//alert(Status)	 
 	}

@@ -17,10 +17,10 @@ include_once 'dbconnect.php';
 
 
 /*
-$sql = "INSERT INTO `local_search_engine`.`listing` (`id`, `UserName`, `UserID`, `UserEmail`, `Categories`, `photo`, `Name`, `Address`, `Tags`, `Number`, `Email`, `Rating`, `website`, `status`) VALUES (NULL, NULL, '".$UserID."', NULL, '".$Categories."', '".$photoProfile."', '".$Name."', '".$Address."', '".$Tags."', '".$Phone."', '".$Email."', '".$Rating."', '".$Website."', '".$Status."');";*/
+$sql = "INSERT INTO `webcreat_test`.`listing` (`id`, `UserName`, `UserID`, `UserEmail`, `Categories`, `photo`, `Name`, `Address`, `Tags`, `Number`, `Email`, `Rating`, `website`, `status`) VALUES (NULL, NULL, '".$UserID."', NULL, '".$Categories."', '".$photoProfile."', '".$Name."', '".$Address."', '".$Tags."', '".$Phone."', '".$Email."', '".$Rating."', '".$Website."', '".$Status."');";*/
 
 
-$sql = "UPDATE `local_search_engine`.`listing` SET `Categories` = '".$Categories."', `Name` = '".$Name."', `Address` = '".$Address."', `Tags` = '".$Tags."', `Number` = '".$PhoneNumber."', `Email` = '".$Email."', `website` = '".$Website."' WHERE `listing`.`id` = '".$id."';";
+$sql = "UPDATE `webcreat_test`.`listing` SET `Categories` = '".$Categories."', `Name` = '".$Name."', `Address` = '".$Address."', `Tags` = '".$Tags."', `Number` = '".$PhoneNumber."', `Email` = '".$Email."', `website` = '".$Website."' WHERE `listing`.`id` = '".$id."';";
 
  
 
